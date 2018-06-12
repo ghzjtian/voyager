@@ -61,7 +61,7 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 ### 6.导入本地 voyager 包<a name="voyager_local"/>
 * [1.Composer 本地路径加载第三方扩展包](https://laravel-china.org/topics/1999/composer-local-path-loading-third-party-extension-pack)
 * 2.这样做的目的是为了充分地了解 voyager 的内部结构及做好笔记.
-
+* 3.现在这个项目有两个 git repository , 1.laravel 项目 2.packages 下的 voyager framework 包.
 
 
 
