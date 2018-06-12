@@ -1,11 +1,20 @@
 # Yoyager 项目
-> 当前为 `dev` 分支.
+> 当前为 `dev2` 分支(在 `dev` 分支的基础上修改).
 
 
 ### [1.yoyager 的 Github 地址](https://github.com/the-control-group/voyager)
 ### [2.yoyager 官方文档](https://voyager.readme.io/docs)
 ### 3.已经 [安装](https://laravel-china.org/docs/laravel/5.6/installation/1352) 并[搭建](https://laravel-china.org/docs/laravel/5.6/homestead/1355#configuring-homestead)好了 homestead 的开发环境.
-### 4.默认的账号及密码:
+
+### [4.默认的账号及密码:](#id_password)
+### [5.出现 `Missing storage symlink` 问题](#missing_issue)
+
+### [6.导入本地 voyager 包](#voyager_local)
+***
+***
+***
+
+### 4.默认的账号及密码:<a name="id_password"/>
     * 1.admin账号1
 ```
 email: admin@admin.com
@@ -20,7 +29,8 @@ password: 1234567
 
 ```
 
-### 5.出现 `Missing storage symlink > symlink(): No such file or directory` 错误
+### 5.出现 `Missing storage symlink > symlink(): No such file or directory` 错误<a name="missing_issue"/>
+
 * 1.用 `vagrant ssh` 连接虚拟机后,看到是虚拟机 `/home/vagrant/code/storage` 链接到 mac 的 `public/storage` 地址上所引起的错误：
 
 ```$xslt
@@ -45,3 +55,15 @@ lrwxr-xr-x 1 vagrant vagrant   81 Jun 11 09:03 storage -> /Users/tianzeng/Docume
 sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/storage
 
 ```
+
+***
+
+### 6.导入本地 voyager 包<a name="voyager_local"/>
+* [1.Composer 本地路径加载第三方扩展包](https://laravel-china.org/topics/1999/composer-local-path-loading-third-party-extension-pack)
+* 2.这样做的目的是为了充分地了解 voyager 的内部结构及做好笔记.
+
+
+
+
+
+
