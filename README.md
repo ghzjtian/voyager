@@ -10,6 +10,10 @@
 ### [5.出现 `Missing storage symlink` 问题](#missing_issue)
 
 ### [6.导入本地 voyager 包](#voyager_local)
+
+### [7.常见的配置的真实路径](#truely_path)
+
+
 ***
 ***
 ***
@@ -62,7 +66,18 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 * [1.Composer 本地路径加载第三方扩展包](https://laravel-china.org/topics/1999/composer-local-path-loading-third-party-extension-pack)
 * 2.这样做的目的是为了充分地了解 voyager 的内部结构及做好笔记.
 * 3.现在这个项目有两个 git repository , 1.laravel 项目 2.packages 下的 voyager framework 包.
+* 4.voyager 的 GitHub 路径为:[https://github.com/ghzjtian/voyager](https://github.com/ghzjtian/voyager)
 
+
+***
+
+### 7.常见的配置的真实路径<a name="truely_path"/>
+
+* 1.`Voyager::view('voyager::login');`
+    * 显示 login 登录页面.真实路径为: packages/voyager/resources/views/login.blade.php
+* 2.`href="{{ voyager_asset('images/logo-icon.png') }}`
+    * {{-- 在 packages/voyager/publishable/assets/image 下 --}}
+* 3.{{-- Voyager::setting 在 packages/voyager/src/Voyager.php 下  --}}
 
 
 

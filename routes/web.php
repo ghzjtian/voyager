@@ -17,5 +17,6 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'admin'], function () {
+//    packages/voyager/routes/voyager
     Voyager::routes();
 });

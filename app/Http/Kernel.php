@@ -38,6 +38,7 @@ class Kernel extends HttpKernel
         ],
 
         'api' => [
+//            指定一个经过身份验证并且用户每分钟访问频率不超过 60 次的路由
             'throttle:60,1',
             'bindings',
         ],
