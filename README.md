@@ -76,9 +76,11 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 * 1.`Voyager::view('voyager::login');`
     * 显示 login 登录页面.真实路径为: packages/voyager/resources/views/login.blade.php
 * 2.`href="{{ voyager_asset('images/logo-icon.png') }}`
-    * {{-- 在 packages/voyager/publishable/assets/image 下 --}}
-* 3.{{-- Voyager::setting 在 packages/voyager/src/Voyager.php 下  --}}
-
+    *  在 packages/voyager/publishable/assets/image 下 
+* 3.`Voyager::setting `
+    * 在 packages/voyager/src/Voyager.php 下 
+* 4.翻译文件，如  ` {{ __('voyager::generic.dashboard') }}`
+    *  翻译文件在 packages/voyager/publishable/lang/en/generic.dashboard 中
 
 
 

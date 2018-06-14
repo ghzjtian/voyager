@@ -65,6 +65,9 @@
         </style>
     </head>
     <body>
+
+    {!! menu('admin' , 'mymenu') !!}
+
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -81,6 +84,10 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+                <img src="{{Voyager::image(setting('site.logo'))}}" />
+                <h1>{{setting('general.description')}}</h1>
+
+
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>

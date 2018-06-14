@@ -142,6 +142,7 @@ return [
 
     'dashboard' => [
         // Add custom list items to navbar's dropdown
+        //下拉菜单
         'navbar_items' => [
             'Profile' => [
                 'route'      => 'voyager.profile',
@@ -158,7 +159,7 @@ return [
                 'icon_class' => 'voyager-power',
             ],
         ],
-
+        //中间显示的组件
         'widgets' => [
             'TCG\\Voyager\\Widgets\\UserDimmer',
             'TCG\\Voyager\\Widgets\\PostDimmer',

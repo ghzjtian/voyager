@@ -20,3 +20,7 @@ Route::group(['prefix' => 'admin'], function () {
 //    packages/voyager/routes/voyager
     Voyager::routes();
 });
+
+Route::get('pages',function(){
+   return view('pages');
+});
