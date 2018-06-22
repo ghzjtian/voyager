@@ -45,3 +45,5 @@ lrwxr-xr-x 1 vagrant vagrant   81 Jun 11 09:03 storage -> /Users/tianzeng/Docume
 sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/storage
 
 ```
+
+* [6.用 MailGun 收发邮件服务教程](https://devdojo.com/blog/tutorials/sending-emails-with-laravel-and-mailgun)
