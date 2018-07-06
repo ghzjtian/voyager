@@ -1,5 +1,5 @@
 # Yoyager 项目
-> 当前为 `dev` 分支.
+> 当前为 `jwt_auth` 分支.(在 voyager 的基础上，集成 [jwt_auth](https://laravel-china.org/articles/13734/using-tymondesignsjwt-auth-to-build-web-and-api-authentication-system) 的功能).
 
 
 ### [1.yoyager 的 Github 地址](https://github.com/the-control-group/voyager)
@@ -46,4 +46,11 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 
 ```
 
-* [6.用 MailGun 收发邮件服务教程](https://devdojo.com/blog/tutorials/sending-emails-with-laravel-and-mailgun)
+* [6.用 MailGun 代收发邮件服务教程](https://devdojo.com/blog/tutorials/sending-emails-with-laravel-and-mailgun)
+
+
+* 7.问题:
+    * 1.如果输入的 token 有误，会显示 `Route [login] not defined.`,应该返回自定义的 `json`.
+        * 解决方法:把 `routes/api.php` 和 `app/Http/Controllers/AuthController.php` 中的 `middleware('auth/api')` 改为 `middleware('api')`
+    
+    
