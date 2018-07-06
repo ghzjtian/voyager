@@ -13,9 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('api')->get('/user', function (Request $request) {
+//    return 'Good';
+//});
 
 
 Route::group([
@@ -25,7 +25,7 @@ Route::group([
 
 ], function ($router) {
 
-    Route::post('login', 'AuthController@login') ;
+    Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::any('me', 'AuthController@me');

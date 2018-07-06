@@ -52,5 +52,5 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 * 7.问题:
     * 1.如果输入的 token 有误，会显示 `Route [login] not defined.`,应该返回自定义的 `json`.
         * 解决方法:把 `routes/api.php` 和 `app/Http/Controllers/AuthController.php` 中的 `middleware('auth/api')` 改为 `middleware('api')`
-    
+    * 2.不知道为什么已经在很多地方定义了 使用的 `Guard` 为 `api` ,但在 `Controller` 中如果不手动指定还是会使用默认的 `web` 的 `Guard`
     

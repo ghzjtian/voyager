@@ -20,6 +20,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+
+
 Route::get('send_test_email', function(){
     Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
     {
