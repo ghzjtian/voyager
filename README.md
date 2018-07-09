@@ -54,14 +54,24 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 
 ### 8.已知的问题:
 * 1.如果输入的 token 有误，会显示 `{}` 空的 json,应该返回自定义的 `json`.(发现还没理清 auth('api') 的逻辑)
-* 2. [web 和 api 的同时认证问题](https://laravel-china.org/articles/13734/using-tymondesignsjwt-auth-to-build-web-and-api-authentication-system)
+    * 1.在每个请求的入口验证 token 的有效性:
+        ```angular2html
+        try {
+            $jwt = auth('api')->getPayload();
+        } catch (\Exception $e) {
+            return response()->json(['message'=>$e->getMessage(),'code'=>$e->getCode()],403);
+        }
+        ```
+    * 2. `jwt` 不同的 Exception 在目录 `Tymon\JWTAuth\Exceptions` 下,如果需要返回不同的 message 和 code ,可以搞多几个 `catch`
+        
+* 2. [web 和 api 的同时认证问题(已经解决)](https://laravel-china.org/articles/13734/using-tymondesignsjwt-auth-to-build-web-and-api-authentication-system)
 * 3.单设备登录的问题(还没解决(JWTGuard))
     * (1.想到的思路，还没验证)在数据库中保存一个 user 对应的 token 的值:
         * 1.如果登录时该用户没有 token 在数据库中，就保存一个 token 到数据库中
         * 2.如果登录时有了一个 token 在数据库中,就把数据库中的 token 更新.
         * 3.如果是 refresh 了一个 token ,就记得更新数据库中的 token 。
     
-  
+
   
 ### JWT 框架的相关的资料:
 * 1.[Laravel 使用 JWT 实现 API Auth, 打造用户授权接口](https://laravel-china.org/articles/6216/laravel-uses-jwt-to-implement-api-auth-to-build-user-authorization-interfaces)

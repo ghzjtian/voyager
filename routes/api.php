@@ -25,7 +25,7 @@ Route::group([
 
 ], function ($router) {
 
-    Route::post('login', 'AuthController@login') -> middleware('jwt.refresh');
+    Route::post('login', 'AuthController@login') ;
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::any('me', 'AuthController@me');

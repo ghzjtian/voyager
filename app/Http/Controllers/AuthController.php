@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
+use Tymon\JWTAuth\Exceptions\TokenInvalidException;
+use Tymon\JWTAuth\Exceptions\JWTException;
 
 class AuthController extends Controller
 {
@@ -26,7 +28,7 @@ class AuthController extends Controller
     {
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth('api')->attempt($credentials)) {
+        if (!$token = auth('api')->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
@@ -40,6 +42,16 @@ class AuthController extends Controller
      */
     public function me()
     {
+        try {
+            $jwt = auth('api')->getPayload();
+        } catch(TokenInvalidException $e){
+            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 解码出错!'],403);
+        }catch(JWTException $e){
+            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 不能解码'],403);
+        }catch (\Exception $e) {
+            return response()->json(['message'=>$e->getMessage(),'code'=>$e->getCode()],403);
+        }
+
         return response()->json(auth('api')->user());
     }
 
