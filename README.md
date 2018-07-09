@@ -68,12 +68,13 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
   
   
 ### 9.相关的 `Auth` 的资料
-    * [1.Laravel 认证原理及完全自定义认证](https://laravel-china.org/articles/3825/laravel-authentication-principle-and-full-custom-authentication)
-    * [2.JWT 完整使用详解](https://laravel-china.org/articles/10885/full-use-of-jwt)
-    * [3.使用 Jwt-Auth 实现 API 用户认证以及无痛刷新访问令牌](https://laravel-china.org/articles/7264/using-jwt-auth-to-implement-api-user-authentication-and-painless-refresh-access-token)
-    * [4.Laravel 5.2 Auth 改用 salt+passwrod 加密验证的实现](https://laravel-china.org/articles/1989/laravel-52-auth-switch-to-saltpasswrod-encryption-authentication)
-    * [5.Laravel JWT Authentication Tutorial(注册和登录的认证)](https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/#Laravel_JWT_Authentication_Tutorial)
-    * [6.Multiple Authentication in Laravel 5.4 Natively! (Admins + Users) ](https://www.youtube.com/watch?list=PLwAKR305CRO9S6KVHMJYqZpjPzGPWuQ7Q&v=iKRLrJXNN4M)
-
-  
+* [1.Laravel 认证原理及完全自定义认证](https://laravel-china.org/articles/3825/laravel-authentication-principle-and-full-custom-authentication)
+* [2.JWT 完整使用详解](https://laravel-china.org/articles/10885/full-use-of-jwt)
+* [3.使用 Jwt-Auth 实现 API 用户认证以及无痛刷新访问令牌](https://laravel-china.org/articles/7264/using-jwt-auth-to-implement-api-user-authentication-and-painless-refresh-access-token)
+* [4.Laravel 5.2 Auth 改用 salt+passwrod 加密验证的实现](https://laravel-china.org/articles/1989/laravel-52-auth-switch-to-saltpasswrod-encryption-authentication)
+* [5.Laravel JWT Authentication Tutorial(注册和登录的认证)](https://appdividend.com/2018/02/24/laravel-jwt-authentication-tutorial/#Laravel_JWT_Authentication_Tutorial)
+* [6.Multiple Authentication in Laravel 5.4 Natively! (Admins + Users) ](https://www.youtube.com/watch?list=PLwAKR305CRO9S6KVHMJYqZpjPzGPWuQ7Q&v=iKRLrJXNN4M)
+* [7.JWT 的介绍1](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
+* [8.JWT 的介绍2](https://juejin.im/entry/577b7b56a3413100618c2938)
+* [8.JWT 字符串的在线解析器](https://jwt.io/)
   
