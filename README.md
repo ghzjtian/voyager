@@ -70,8 +70,14 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
         * 1.如果登录时该用户没有 token 在数据库中，就保存一个 token 到数据库中
         * 2.如果登录时有了一个 token 在数据库中,就把数据库中的 token 更新.
         * 3.如果是 refresh 了一个 token ,就记得更新数据库中的 token 。
-    
-
+* 4.如何在 Controller 中拿到数据并通过 api json 的方式返回给客户端(要理解 voyager 的权限控制). 
+    * 1.直接 `return` 就可以返回 `json` 的数据
+    ``` 
+    Route::any('posts',function (){
+               $posts = \TCG\Voyager\Models\Post::all();
+               return $posts;
+           });
+    ```
   
 ### JWT 框架的相关的资料:
 * 1.[Laravel 使用 JWT 实现 API Auth, 打造用户授权接口](https://laravel-china.org/articles/6216/laravel-uses-jwt-to-implement-api-auth-to-build-user-authorization-interfaces)
@@ -90,7 +96,7 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 * [10.Laravel 源码阅读指南 -- 用户认证系统 (基础介绍)](https://laravel-china.org/articles/13504/laravel-source-reading-guide-user-authentication-system-basic-introduction)
 * [11.Route 相关(Laravel 源码阅读指南 -- Facades)](https://laravel-china.org/articles/12676/laravel-source-code-reading-guide-facades)
 
-
-
+### 10.相关的 `Voyager Front-end` 的资料.
+* [1.Working with Voyager on the Front-end](https://devdojo.com/blog/tutorials/working-with-voyager-on-the-front-end)
 
 

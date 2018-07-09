@@ -29,5 +29,12 @@ Route::group([
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
     Route::any('me', 'AuthController@me');
-
+    Route::any('posts',function (){
+        $posts = \TCG\Voyager\Models\Post::all();
+        return $posts;
+    });
+    Route::any('all_users',function(){
+        $users = \App\User::all();
+        return $users;
+    });
 });

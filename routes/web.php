@@ -20,6 +20,10 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
+Route::get('/home', function () {
+    $posts = \TCG\Voyager\Models\Post::all();
+    return view('home', compact('posts'));
+});
 
 
 Route::get('send_test_email', function(){
