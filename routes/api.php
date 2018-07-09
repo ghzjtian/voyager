@@ -33,8 +33,5 @@ Route::group([
         $posts = \TCG\Voyager\Models\Post::all();
         return $posts;
     });
-    Route::any('all_users',function(){
-        $users = \App\User::all();
-        return $users;
-    });
+    Route::any('all_users','AuthController@getAllUsers');
 });

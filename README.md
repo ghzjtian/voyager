@@ -78,6 +78,8 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
                return $posts;
            });
     ```
+    
+    * 2.在 Controller 中加入 ` $jwt = auth('api')->getPayload();` 就可以轻松地实现权限的控制.
   
 ### JWT 框架的相关的资料:
 * 1.[Laravel 使用 JWT 实现 API Auth, 打造用户授权接口](https://laravel-china.org/articles/6216/laravel-uses-jwt-to-implement-api-auth-to-build-user-authorization-interfaces)
