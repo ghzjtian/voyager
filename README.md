@@ -76,5 +76,11 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
 * [6.Multiple Authentication in Laravel 5.4 Natively! (Admins + Users) ](https://www.youtube.com/watch?list=PLwAKR305CRO9S6KVHMJYqZpjPzGPWuQ7Q&v=iKRLrJXNN4M)
 * [7.JWT 的介绍1](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
 * [8.JWT 的介绍2](https://juejin.im/entry/577b7b56a3413100618c2938)
-* [8.JWT 字符串的在线解析器](https://jwt.io/)
-  
+* [9.JWT 字符串的在线解析器](https://jwt.io/)
+* [10.Laravel 源码阅读指南 -- 用户认证系统 (基础介绍)](https://laravel-china.org/articles/13504/laravel-source-reading-guide-user-authentication-system-basic-introduction)
+* [11.Route 相关(Laravel 源码阅读指南 -- Facades)](https://laravel-china.org/articles/12676/laravel-source-code-reading-guide-facades)
+
+
+
+
+
