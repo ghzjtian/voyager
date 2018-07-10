@@ -96,15 +96,32 @@ class AuthController extends Controller
 
     public function getAllUsers(){
 
+//        try {
+//            $jwt = auth('api')->getPayload();
+//        } catch(TokenInvalidException $e){
+//            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 无效!'],403);
+//        }catch(JWTException $e){
+//            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'需要 token 来验证'],403);
+//        }catch (\Exception $e) {
+//            return response()->json(['message'=>$e->getMessage(),'code'=>$e->getCode()],403);
+//        }
+
         try {
-            $jwt = auth('api')->getPayload();
-        } catch(TokenInvalidException $e){
-            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 解码出错!'],403);
+            $user = auth('api')->userOrFail();
+        }
+        catch(TokenInvalidException $e){
+            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 无效!'],403);
         }catch(JWTException $e){
-            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'token 不能解码'],403);
-        }catch (\Exception $e) {
+            return response()->json(['message'=>$e->getMessage(),'code'=>'403',"error_detail"=>'需要 token 来验证'],403);
+        }
+        catch (\Tymon\JWTAuth\Exceptions\UserNotDefinedException $e) {
+            return response()->json(['message'=>$e->getMessage(),'code'=>'403'],403);
+        }
+        catch (\Exception $e) {
             return response()->json(['message'=>$e->getMessage(),'code'=>$e->getCode()],403);
         }
+
+
 
         $users = \App\User::all();
         return $users;

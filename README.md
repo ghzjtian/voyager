@@ -70,6 +70,8 @@ sudo ln -s /home/vagrant/code/storage/app/public /home/vagrant/code/public/stora
         * 1.如果登录时该用户没有 token 在数据库中，就保存一个 token 到数据库中
         * 2.如果登录时有了一个 token 在数据库中,就把数据库中的 token 更新.
         * 3.如果是 refresh 了一个 token ,就记得更新数据库中的 token 。
+    * 2.可以看看 `JWTGuard/$lastAttempted` 是否可以实现单设备登录的功能.
+    
 * 4.如何在 Controller 中拿到数据并通过 api json 的方式返回给客户端(要理解 voyager 的权限控制). 
     * 1.直接 `return` 就可以返回 `json` 的数据
     ``` 
