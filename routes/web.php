@@ -11,11 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/',function(){
+    $posts = App\Post::all();
+    return view('home',compact('posts'));
+});
+Route::get('post/{slug}',function($slug){
+    $post = App\Post::where('slug','=',$slug)->firstOrFail();
+    return View('post',compact('post'));
 });
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
