@@ -2,10 +2,9 @@
 <div class="w3-container w3-light-grey" style="padding:128px 16px">
     <div class="w3-row-padding">
         <div class="w3-col m6">
-            <h3>We know design.</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et
-                dolore.</p>
-            <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+            <h3>产品展示.</h3>
+            <p>要可以展示挑选作品的左右的分布</p>
+            <p><a href="#products" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
         </div>
         <div class="w3-col m6">
             <img class="w3-image w3-round-large" src="https://www.w3schools.com/w3images/phone_buildings.jpg"

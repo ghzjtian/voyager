@@ -1,7 +1,5 @@
 <link rel="shortcut icon" href="/favicon.ico"/>
 <link rel="bookmark" href="/favicon.ico"/>
-
-
 <title>@yield('page_title',setting('admin.title'))</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,21 +11,14 @@
     body, h1, h2, h3, h4, h5, h6 {
         font-family: "Raleway", sans-serif
     }
-
     body, html {
         height: 100%;
         line-height: 1.8;
     }
-
-    /* Full height image header */
-    .bgimg-1 {
-        background-position: center;
-        background-size: cover;
-        background-image: url("https://www.w3schools.com/w3images/mac.jpg");
-        min-height: 100%;
-    }
-
     .w3-bar .w3-button {
         padding: 16px;
     }
+
+
+
 </style>

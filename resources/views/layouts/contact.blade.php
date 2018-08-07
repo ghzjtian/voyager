@@ -1,6 +1,6 @@
 <!-- Contact Section -->
 <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-    <h3 class="w3-center">CONTACT</h3>
+    <h3 class="w3-center">联系我们</h3>
     <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
     <div class="w3-row-padding" style="margin-top:64px">
         <div class="w3-half">
@@ -22,7 +22,9 @@
         </div>
         <div class="w3-half">
             <!-- Add Google Maps -->
-            <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
+        {{--<div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>--}}
+        <!--百度地图生成器 http://api.map.baidu.com/lbsapi/creatmap/ -->
+            @include('layouts.baiduMap')
         </div>
     </div>
 </div>
