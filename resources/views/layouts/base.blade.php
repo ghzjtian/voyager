@@ -14,9 +14,6 @@
     @include('layouts.nav_bar')
 @show
 
-
-
-
 @yield('header_img')
 @yield('products')
 @yield('gallery')
@@ -82,7 +79,6 @@
 @section('footer')
     @include('layouts.footer')
 @show
-
 
 
 </body>

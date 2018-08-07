@@ -1,6 +1,6 @@
 
 <!-- Team Section -->
-<div class="w3-container" style="padding:128px 16px" id="team">
+<div class="w3-container" style="padding:128px 16px" id="news">
     <h3 class="w3-center">相关的这个行业或公司的新闻</h3>
     <p class="w3-center w3-large">The ones who runs this company</p>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">

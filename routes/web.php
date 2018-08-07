@@ -11,36 +11,33 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 Route::get('/', function () {
     return view('home');
 });
-
-Route::get('blade2',function () {
-    return view('layouts.child');
+Route::get('products', function () {
+    return view('products');
 });
-Route::get('base',function () {
-    return view('layouts.base');
+Route::get('gallery', function () {
+    return view('gallery');
+});
+Route::get('news', function () {
+    return view('news');
+});
+Route::get('about', function () {
+    return view('about');
+});
+Route::get('contact', function () {
+    return view('contact');
 });
 
-//Route::get('/',function(){
-//    $posts = App\Post::all();
-//    return view('home',compact('posts'));
-//});
-//Route::get('post/{slug}',function($slug){
-//    $post = App\Post::where('slug','=',$slug)->firstOrFail();
-//    return View('post',compact('post'));
-//});
 
-//Voyager 代码
+//Voyager 后台管理 代码
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
 
-
+//测试
 Route::get('homepage',function (){
     return view('homepage');
 });

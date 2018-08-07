@@ -66,7 +66,8 @@
             var p0 = json.point.split("|")[0];
             var p1 = json.point.split("|")[1];
             var point = new BMap.Point(p0,p1);
-            var iconImg = createIcon(json.icon);
+            // var iconImg = createIcon(json.icon);//因为 BaiDu 的 icon image 地址访问错误，所以这里改为 null
+            var iconImg = null;
             var marker = new BMap.Marker(point,{icon:iconImg});
             var iw = createInfoWindow(i);
             var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
