@@ -2,7 +2,7 @@
 
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-        <a href="/" class="w3-bar-item w3-button w3-wide">LOGO</a>
+        <a href="/" class="w3-bar-item w3-button w3-wide">{{ setting('site.title') }}</a>
         <!-- Right-sided navbar links , icons from https://www.w3schools.com/icons/fontawesome_icons_webapp.asp -->
         <div class="w3-right w3-hide-small">
             <a href="/" class="w3-bar-item w3-button"><i class="fa fa-home"></i>首页</a>
