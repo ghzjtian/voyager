@@ -3,7 +3,7 @@
 {{--首页的置顶大图--}}
 @section('header_img')
     @include('layouts.header_img')
-@show
+@endsection
 
 {{--
 
@@ -19,20 +19,20 @@
 {{--产品展示--}}
 @section('products')
     @include('layouts.products')
-@show
+@endsection
 
 {{--产品展示,从 gallery 中选几张酒的作品出来这里展示，点击进去就是 gallery 页}}
 {{-- gallery 信息--}}
 @section('gallery')
     @include('layouts.gallery')
-@show
+@endsection
 
 
 {{--最近的新闻事件,酒品知识,从新闻中摘取几个出来，放在这里，然后点击就进去相关的 news 页的详细--}}
 {{--普通的 section 信息--}}
 @section('news')
     @include('layouts.news')
-@show
+@endsection
 
 
 
@@ -40,11 +40,9 @@
 
 @section('about')
     @include('layouts.about')
-@show
+@endsection
 
 {{--联系我们.--}}
 @section('contact')
-@include('layouts.contact')
-@show
-
-
+    @include('layouts.contact')
+@endsection
